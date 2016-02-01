@@ -1,0 +1,75 @@
+@bg-color: #ebeae6;
+@bg-img: url('/img/bg.jpg');
+@font-main-color: #8c8c8c;
+@font-header-color: #d14343;
+@font-color-unactive: #bebebe;
+
+@font-face {
+	font-family: 'BebasNeue';
+	src: url('/font/BebasNeue_Regular.otf');
+}
+
+body {
+	background-image: @bg-img;
+	background-color:  @bg-color;
+	font: 16px BebasNeue;
+	color: @font-main-color;
+
+	#wrapper {
+		max-width: 950px;
+		margin: auto;
+		margin-top: 40px;
+
+
+		.logo {
+			float: left;
+			position:relative;
+			margin-left: 10px;
+
+			.logo_centered {
+				position: absolute;
+				top: -10px;
+
+				#logo_user {
+					color: @font-header-color;
+					font-size: 20px;
+					margin-bottom: -10px;
+				}
+
+				.header_big {
+					font-size: 40px;
+					text-decoration: underline;
+					font-weight: bold;
+				}
+			}
+		}
+
+		.nav_main-container {
+			float: right;
+
+			li {
+				display: inline-block;
+				margin-left: 15px;
+				
+				a {
+					color: @font-color-unactive;
+					font-size: 24px;
+				}
+
+				a:hover  {
+					color: @font-main-color;
+				}
+			}
+
+			li.nav_main-active {
+				a {
+					color: @font-main-color;
+					border-bottom: 3px solid;
+				}
+			}
+		}
+
+	}
+}
+
+
