@@ -3,6 +3,8 @@
 @font-main-color: #8c8c8c;
 @font-header-color: #d14343;
 @font-color-unactive: #bebebe;
+@font-header: BebasNeue;
+@font-text: Helvetica;
 
 @font-face {
 	font-family: 'BebasNeue';
@@ -12,7 +14,7 @@
 body {
 	background-image: @bg-img;
 	background-color:  @bg-color;
-	font: 16px BebasNeue;
+	font: 16px @font-header;
 	color: @font-main-color;
 
 	#wrapper {
@@ -25,23 +27,25 @@ body {
 			float: left;
 			position:relative;
 			margin-left: 10px;
+			top: -10px;
 
-			.logo_centered {
-				position: absolute;
-				top: -10px;
 
-				#logo_user {
-					color: @font-header-color;
-					font-size: 20px;
-					margin-bottom: -10px;
-				}
-
-				.header_big {
-					font-size: 40px;
-					text-decoration: underline;
-					font-weight: bold;
-				}
+			#logo_user {
+				color: @font-header-color;
+				font-size: 20px;
+				margin-bottom: -10px;
 			}
+
+			.header_big {
+				font-size: 40px;
+				text-decoration: underline;
+				font-weight: bold;
+			}
+		}
+
+		.logo:after {
+			content: "";
+			display: block;
 		}
 
 		.nav_main-container {
@@ -69,7 +73,34 @@ body {
 			}
 		}
 
+		.baner_centered {
+			margin-top: 48px;
+			text-align: center;
+			
+			.text_big {
+				font:58px @font-text;
+				line-height: 58px;
+				.text-engraved
+			}
+		}
+
 	}
+
 }
 
+.text-engraved {
+	text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+}
+
+.text_bolder {
+	font-weight: 600;
+}
+
+
+/*Clear fixes*/
+header:after  {
+	content: "";
+	clear: both;
+	display: block;
+}
 
